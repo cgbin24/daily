@@ -1,8 +1,6 @@
 #### 问题：vue中使用videojs无法自定义触发全屏
 
-> 官网：
->
-> ![image-20211020102109870](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211020102109870.png)
+> [官网描述 --> enterFullScreen()](https://docs.videojs.com/html5#enterFullScreen)
 
 这样用：
 
@@ -13,7 +11,11 @@ player.enterFullScreen();
 
 结果：
 
-![image-20211020102309227](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211020102309227.png)
+```shell
+[Vue warn]: Error in v-on handler: "TypeError: Object(...)(...).enterFullScreen is not a function"...
+```
+
+
 
 #### 缓兵之计
 

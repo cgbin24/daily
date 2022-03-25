@@ -1,6 +1,14 @@
 ### 问题描述
 
-![image-20210701111942258](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210701111942258.png)
+```shell
+11：02：07.390 [YZZäAY* •Ç"•Yş0Y020000L20]
+• [27D• [27C]
+11：02：07.392 [1ZZäA."'ş00.00
+11：02：07.394 [1ZA•ç"•'ş0L1
+1:02:07.396 [1ZZäAT”•şi3ç”••Y0200002L20
+11：02：07.398 [YZZäAY*."•1ş0Y020000220]
+11：02：07.400 [1ZZäAT*.".s•0200002LY0
+```
 
 ### 分析
 
@@ -8,8 +16,7 @@
 
 ### 解决方式
 
-- 找到 `文件`， 依次选择 `选择编码重新打开`， 选择 `UTF-8` 即可，如图
+- 找到 `文件`， 
+- 依次选择 `选择编码重新打开`
+- 选择 `UTF-8` 即可
 
-  ![image-20210701112645114](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210701112645114.png)
-
-over
