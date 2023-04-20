@@ -1,6 +1,8 @@
 ### Angular 配置代理 `proxy` 实践
 
-#### $方式一
+### :: 解决方案
+
+#### :: 方式一 ::
 
 - 第一步，在根目录或`/src` 下新建一个 `proxy.conf.json` 文件
 
@@ -63,7 +65,7 @@
   ng serve
   ```
 
-#### $方式二
+#### :: 方式二 ::
 
 - 第一步，在根目录或`/src` 下新建一个 `proxy.conf.js` 文件
 
@@ -125,12 +127,12 @@
   ng serve
   ```
 
-#### 总结
+### :: 总结
 
 相对来讲，两种方式都可实现，具体差别也不大，但若是需要配置多个面向 `target` 的代理地址，且同时需要多个匹配规则时，推荐使用 **`方式二`** `proxy.conf.js` 的方式
 
 
 
-#### 衍生阅读
+### :: 衍伸阅读
 
-- [代理到后端服务器](https://angular.cn/guide/build#proxying-to-a-backend-server)
+[代理到后端服务器](https://angular.cn/guide/build#proxying-to-a-backend-server)
