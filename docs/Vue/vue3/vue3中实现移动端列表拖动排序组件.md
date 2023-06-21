@@ -187,6 +187,14 @@ const handleTouchEnd = (event: TouchEvent, item: IListDataItem, index: number) =
   const items = Array.from(itemsRef.value);
   const itemHeight = items[0].clientHeight || 0;
   const deltaY = event.changedTouches[0].clientY - touchStartY.value;
+  // 第一个向上拖拽，最后一个向下拖拽，不交换、更新数据
+  if ((index <= 0 && deltaY < 0) || ((index >= props.listData.length - 1) && deltaY > 0)) {
+    // 恢复元素的位置
+    items.forEach((item, index) => {
+      offsets[index] = 0
+    })
+    return
+  }
   // 计算出当前deltaY对应的元素的索引
   const targetIndex = Math.round(deltaY / itemHeight) + activeIndex.value;
   // 为正数时，向后拖拽，为负数时，向前拖拽【更新数据】
@@ -196,10 +204,13 @@ const handleTouchEnd = (event: TouchEvent, item: IListDataItem, index: number) =
   items.forEach((item, index) => {
     offsets[index] = 0
   })
-  // 更新数据
-  nextTick(() => {
-    emits('update:listData', props.listData)
-  })
+  // 移动距离超过元素高度的一半时，更新数据
+  if (Math.abs(deltaY) > itemHeight / 2) {
+    // 更新数据
+    nextTick(() => {
+      emits('update:listData', props.listData)
+    })
+  }
 }
 </script>
 <style scoped lang="scss">
