@@ -24,7 +24,7 @@ http {
 
   server {
     listen        3000;
-    server_name   example;
+    server_name   www.example.com;
     location  / {
       root        /example/dist;
       index       index.html index.htm;
@@ -57,8 +57,8 @@ http {
 # servers/example.conf
 
 server {
-  listen        3000;     # 端口号
-  server_name   example;  # 服务名 - 访问的域名
+  listen        3000;             # 端口号
+  server_name   www.example.com;  # 服务名 - 访问的域名
   location  / {
     root        /example/dist;
     index       index.html index.htm;
@@ -98,6 +98,7 @@ events {
 http {
   include         mime.types;
   default_type    application/octet-stream;
+  include servers/*.conf
 
   server {
     listen        80;
@@ -108,6 +109,39 @@ http {
     }
   }
   ...
+}
+```
+=== OR ===
+> 下面也可将 `80` 端口的 `server` 服务也单独拆分出来
+```nginx
+# servers/local.conf
+
+server {
+  listen        80;
+  server_name   localhost;
+  location  / {
+    root        html;
+    index       index.html index.htm;
+  }
+}
+```
+
+```nginx
+# nginx.conf
+
+worker_processes  1;
+
+events {
+  worker_connections  1024;
+}
+
+http {
+  include         mime.types;
+  default_type    application/octet-stream;
+  include servers/*.conf
+
+  ...
+}
 ```
 
 ### :: 重要
@@ -115,3 +149,9 @@ http {
 ```shell
 nginx -s reload
 ```
+
+#### :: 衍伸阅读
+[nginx documentation](https://nginx.org/en/docs/)
+
+## :: 更多内容 ::
+[> 开发过程中踩坑经验记录](https://github.com/cgbin24/daily)
