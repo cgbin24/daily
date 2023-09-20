@@ -1,12 +1,12 @@
 ### 微信小程序构建npm使用记录
 
-#### 问题
+#### :: 问题
 
 > 使用原生微信小程序开发时，通过官方 `typescript` 模板构建的小程序无法正确执行 `构建npm` 成功，从而导致我想通过 `npm` 安装并使用第三方库出现问题
 
 
 
-#### 开发环境（可参照）
+#### :: 开发环境（可参照）
 
 **设备**：`macOS Ventura 13.0`
 
@@ -16,7 +16,7 @@
 
 
 
-#### 错误呈现
+#### :: 错误呈现
 
 - 无法 `构建npm`
 
@@ -35,9 +35,9 @@ time: 2023-04-02 10:56:01
 
 
 
-#### 解决方案
+#### :: 解决方案
 
-【官方建议】[npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
+【微信官方建议】[npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
 
 > 关键的地方就是需要在 `project.config.json` 文件中的 `setting` 对象下配置如下内容，在此之前请确保已初始化【`npm init`】项目
 
@@ -98,6 +98,9 @@ time: 2023-04-02 10:56:01
 
 
 
-#### 重要提醒‼️
+#### :: 重要提醒‼️
 
 > 修改配置后，没效果或是出现报错，请记得【**重启编辑器**】
+
+## :: 更多内容 ::
+[> 开发过程中踩坑经验记录](https://github.com/cgbin24/daily)

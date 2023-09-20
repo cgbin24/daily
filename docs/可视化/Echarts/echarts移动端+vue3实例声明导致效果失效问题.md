@@ -28,6 +28,7 @@ dataSample.js:112 Uncaught TypeError: Cannot read properties of undefined (readi
 经过各种配置尝试，始终未生效
 最后查看官方 `github` 仓库中的 `issues` 得以解决
 原来我在声明实例对象时使用了 `ref` 的方式错误的引用了实例，推荐使用 `shallowRef` 方式声明
+
 ```ts
 ...
 const echartsIns = shallowRef()
