@@ -1,6 +1,6 @@
 #### Mac m1芯片使用 parallels虚拟机安装win10
 
-**安装参考地址: **
+**安装参考地址:**
 
  [parallels desktop pd虚拟机M1版安装Windows10教程](https://www.douban.com/note/828463204/?_i=9177335jjKHuXW)
 
