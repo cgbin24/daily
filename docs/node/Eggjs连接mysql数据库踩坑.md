@@ -110,7 +110,7 @@ module.exports = {
 
 - 设置加密方式
 
-> 处理`mysql v8.x`版本默认加密方式变化导致的问题，将以下脚本信息在数据库中执行，完成后便更改完成
+> 处理`mysql v8.x`版本默认加密方式变化导致的问题（**8.0 之前的 `mysql` 版本，加密规则是 `mysql_native_password`，而在 8.0 之后，加密规则变为 `caching_sha2_password`**），将以下脚本信息在数据库中执行，完成后便更改完成
 
 > 为此，特意使用 `node + express + mysql` 创建一个简易的demo来验证并辅助完成问题排查和解决
 
