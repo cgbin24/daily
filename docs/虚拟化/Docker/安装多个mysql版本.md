@@ -83,3 +83,18 @@ mysql -h 127.0.0.1 -P 3307 -u root -p
 4. **容器管理**：通过 Docker 命令，你可以轻松管理容器，包括启动、停止、删除和查看容器的状态。
 
 通过这些步骤，你可以在 Mac 上通过 Docker 安全地运行多个 MySQL 实例，且不会对宿主机环境造成影响。
+
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false,
+  "registry-mirrors": [
+    "https://cr.console.aliyun.com",
+    "http://hub-mirror.c.163.com",
+    "https://f1361db2.m.daocloud.io"
+  ]
+}
